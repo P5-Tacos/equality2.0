@@ -39,6 +39,9 @@ public class Student {
     @Size(min = 9, max = 12, message = "Grade")
     private int grade;
 
+    public String getName() {
+        return name;
+    }
 
     public Student(String name, int grade){
         this.name = name;

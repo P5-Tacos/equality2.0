@@ -26,7 +26,7 @@ public class ApplicationController {
     }
 
 
-    @PostMapping("/comments")
+    @PostMapping("/students")
     public String playerSave(@Valid Student student, BindingResult bindingResult) {
         // Validation of Decorated PlayerForm attributes
         if (bindingResult.hasErrors()) {

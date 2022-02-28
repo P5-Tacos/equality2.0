@@ -8,5 +8,25 @@
             <h1>People that support equality at Del Norte</h1>
         </div>
 
+        <div th:each="student: ${students}">
+            <p>Name: <span th:text="${student.name}"></span> Grade: <span th:text="${student.grade}"></span></p>
+        </div>
+
+
+        <form action="#" th:action="@{/students}" th:object="${student}" method="POST" >
+            <p>Add your name to the list</p>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" th:name="name" field="name" /></td>
+                </tr>
+                <tr>
+                    <td>Grade:</td>
+                    <td><input type="number" th:name="grade" field="grade" /></td>
+                </tr>
+            </table>
+            <button type="submit" >Add</button>
+        </form>
+
     </body>
 </html>
