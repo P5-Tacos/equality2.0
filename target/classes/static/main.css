@@ -1,0 +1,77 @@
+:root{
+
+    --background: #282c34;
+    --primaryText: #FFFFFF;
+    --textHighlight: #C678DD;
+    --textDanger: #e06c75;
+    --textSuccess: #98C379;
+    --textWarning: #E5C07B;
+    --bgDeg: 161deg;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+    /*background-color: red;*/
+}
+
+/*
+body{
+    height: fit-content;
+    background-color: green;
+    color: var(--primaryText);
+    background-image: linear-gradient(var(--bgDeg), rgba(2,0,36,1) 0%, rgba(86,197,150,1) 0%, rgba(32,80,114,1) 100%);
+}
+*/
+
+/*body:after{
+    content: '';
+    display: block;
+    z-index: -1;
+    position: fixed;
+    top: -2rem; right: 0; bottom: -2rem; left: 0;
+    background-image: linear-gradient(var(--bgDeg), rgba(2,0,36,1) 0%, rgba(86,197,150,1) 0%, rgba(32,80,114,1) 100%);
+}*/
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.units{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav{
+    padding: 20px;
+    padding-left: 50px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.nav-item__grow{
+    flex-grow: 1;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.centered{
+    width: 50%;
+    text-align: center;
+}
