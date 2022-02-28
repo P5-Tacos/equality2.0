@@ -5,7 +5,7 @@
     <body>
 
         <div class="title">
-            <h1>People that support equality at Del Norte</h1>
+            <h1>People that support body positivity at Del Norte</h1>
         </div>
 
         <div th:each="student: ${students}">
@@ -27,6 +27,53 @@
             </table>
             <button type="submit" >Add</button>
         </form>
+
+
+
+        <br>
+        
+
+
+        <div class="btn-group">
+            <!-- Search Box -->
+            <div class="px-3">
+                <input id="search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+        </div>
+
+        <script>
+            const search = document.getElementById('search');
+            const google = 'https://www.google.com/search?q=site%3A+';
+            const site = 'https://nighthawkcodingsociety.com';
+
+            function submitted(event) {
+                if (event.key === 'Enter') {
+                    // calculations to determine new window size at 66% of existing
+                    const reduction = 0.66;  // reduce by 66%
+                    const w = Math.trunc(window.innerWidth*reduction);
+                    const h = Math.trunc(window.outerHeight*reduction);
+                    const l = Math.trunc(window.top.screenX + ((window.innerWidth - w)/2));
+                    const t = Math.trunc(window.top.screenY + ((window.outerHeight - h)/2));
+                    const left = "left=" + l;
+                    const top = "top=" + t;
+                    const width = "width=" + w;
+                    const height = "height=" + h;
+                    const location = left + ", " + top + ", " + width + ", " + height
+
+                    // setup and display window
+                    event.preventDefault();
+                    const url = google
+                        + site
+                        + '+'
+                        + search.value;
+                    const win = window.open(url, "CompSci A Search", location);
+                    win.focus();
+                }
+            }
+            search.addEventListener('keypress', submitted);
+
+          </script>
+
 
     </body>
 </html>
