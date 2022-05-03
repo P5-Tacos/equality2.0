@@ -33,7 +33,7 @@ public class ApplicationController {
             return "students";
         }
         studentSqlRepository.save(student);
-        // Redirect to next step
+        // Redirect to next steps
         return "redirect:/";
     }
 }
